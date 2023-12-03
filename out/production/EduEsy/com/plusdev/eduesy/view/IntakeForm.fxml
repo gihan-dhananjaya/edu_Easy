@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="584.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.plusdev.eduesy.controller.IntakeFormController">
+   <children>
+      <Label layoutX="33.0" layoutY="20.0" text="Intake Management" textFill="#6d058d">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="64.0" prefHeight="0.0" prefWidth="898.0" />
+      <Button layoutX="654.0" layoutY="17.0" mnemonicParsing="false" onAction="#newIntakeOnAction" style="-fx-background-color: #6868FF;" text="+New Intake" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="784.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToHomeOnAction" style="-fx-background-color: #222255;" text="Back to Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtIntakeID" layoutX="14.0" layoutY="82.0" promptText="Intake ID">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="dpStartDate" layoutX="263.0" layoutY="82.0" prefHeight="37.0" prefWidth="218.0" promptText="Start Date" />
+      <TextField fx:id="txtIntakeName" layoutX="493.0" layoutY="82.0" promptText="Intake Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cmbProgram" layoutX="748.0" layoutY="82.0" prefHeight="37.0" prefWidth="180.0" promptText="Program" />
+      <TextField fx:id="txtSearchHere" layoutX="14.0" layoutY="141.0" prefHeight="39.0" prefWidth="717.0" promptText="Search Here">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnSaveIntake" layoutX="748.0" layoutY="141.0" mnemonicParsing="false" onAction="#saveIntakeOnAction" prefHeight="39.0" prefWidth="180.0" style="-fx-background-color: #6868FF;" text="Save Intake" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblIntake" layoutX="14.0" layoutY="192.0" prefHeight="370.0" prefWidth="898.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="112.0" text="#ID" />
+          <TableColumn fx:id="colStartDate" prefWidth="177.0" text="Start Date" />
+            <TableColumn fx:id="colName" prefWidth="177.0" text="Nmae" />
+            <TableColumn fx:id="colProgram" prefWidth="177.0" text="Program" />
+            <TableColumn fx:id="colCompleteState" prefWidth="149.0" text="Complete State" />
+            <TableColumn fx:id="colOption" prefWidth="105.0" text="Option" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
